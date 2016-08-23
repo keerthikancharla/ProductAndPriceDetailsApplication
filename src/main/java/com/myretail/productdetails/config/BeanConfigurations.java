@@ -9,6 +9,11 @@ import org.springframework.web.client.RestTemplate;
  */
 @Configuration
 public class BeanConfigurations {
+    /**
+     * Rest template rest template.
+     *
+     * @return the rest template
+     */
     @Bean
     public RestTemplate restTemplate() {
         return new RestTemplate();

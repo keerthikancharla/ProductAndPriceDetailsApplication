@@ -11,10 +11,20 @@ import org.springframework.stereotype.Component;
 public class PropertyConfigurations {
     private String apiKey;
 
+    /**
+     * Gets api key.
+     *
+     * @return the api key
+     */
     public String getApiKey() {
         return apiKey;
     }
 
+    /**
+     * Sets api key.
+     *
+     * @param apiKey the api key
+     */
     public void setApiKey(String apiKey) {
         this.apiKey = apiKey;
     }

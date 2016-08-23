@@ -6,6 +6,9 @@ import javax.annotation.Generated;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * The type Request attribute.
+ */
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @Generated("org.jsonschema2pojo")
 @JsonPropertyOrder({
@@ -28,8 +31,10 @@ public class RequestAttribute {
     }
 
     /**
-     * @param name
-     * @param value
+     * Instantiates a new Request attribute.
+     *
+     * @param name  the name
+     * @param value the value
      */
     public RequestAttribute(String name, String value) {
         this.name = name;
@@ -37,6 +42,8 @@ public class RequestAttribute {
     }
 
     /**
+     * Gets name.
+     *
      * @return The name
      */
     @JsonProperty("name")
@@ -45,6 +52,8 @@ public class RequestAttribute {
     }
 
     /**
+     * Sets name.
+     *
      * @param name The name
      */
     @JsonProperty("name")
@@ -53,6 +62,8 @@ public class RequestAttribute {
     }
 
     /**
+     * Gets value.
+     *
      * @return The value
      */
     @JsonProperty("value")
@@ -61,6 +72,8 @@ public class RequestAttribute {
     }
 
     /**
+     * Sets value.
+     *
      * @param value The value
      */
     @JsonProperty("value")
@@ -68,11 +81,22 @@ public class RequestAttribute {
         this.value = value;
     }
 
+    /**
+     * Gets additional properties.
+     *
+     * @return the additional properties
+     */
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
         return this.additionalProperties;
     }
 
+    /**
+     * Sets additional property.
+     *
+     * @param name  the name
+     * @param value the value
+     */
     @JsonAnySetter
     public void setAdditionalProperty(String name, Object value) {
         this.additionalProperties.put(name, value);

@@ -21,6 +21,14 @@ public class ProductDetailsController {
     @Autowired
     private ProductDetailsService productDetailsService;
 
+    /**
+     * Gets product and price details.
+     *
+     * @param productId the product id
+     * @return the product and price details
+     * This  method will be invoked for a GET method with the URL pattern as mentioned in the request mapping.
+     * This method is used to get the product name and product price for a given product Id.
+     */
     @RequestMapping(value = "/products/{productId}", method = RequestMethod.GET)
     public
     @ResponseBody
@@ -40,6 +48,15 @@ public class ProductDetailsController {
 
     }
 
+    /**
+     * Update price details string.
+     *
+     * @param productId    the product id
+     * @param productPrice the product price
+     * @return the string
+     * This  method will be invoked for a PUT method with the URL pattern as mentioned in the request mapping.
+     * This method is used to update the product price for a given product Id.
+     */
     @RequestMapping(value = "/products/{productId}", method = RequestMethod.PUT)
     public
     @ResponseBody

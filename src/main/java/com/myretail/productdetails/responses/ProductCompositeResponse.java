@@ -8,6 +8,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * The type Product composite response.
+ */
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @Generated("org.jsonschema2pojo")
 @JsonPropertyOrder({
@@ -30,8 +33,10 @@ public class ProductCompositeResponse {
     }
 
     /**
-     * @param items
-     * @param requestAttributes
+     * Instantiates a new Product composite response.
+     *
+     * @param requestAttributes the request attributes
+     * @param items             the items
      */
     public ProductCompositeResponse(List<RequestAttribute> requestAttributes, List<Item> items) {
         this.requestAttributes = requestAttributes;
@@ -39,6 +44,8 @@ public class ProductCompositeResponse {
     }
 
     /**
+     * Gets request attributes.
+     *
      * @return The requestAttributes
      */
     @JsonProperty("request_attributes")
@@ -47,6 +54,8 @@ public class ProductCompositeResponse {
     }
 
     /**
+     * Sets request attributes.
+     *
      * @param requestAttributes The request_attributes
      */
     @JsonProperty("request_attributes")
@@ -55,6 +64,8 @@ public class ProductCompositeResponse {
     }
 
     /**
+     * Gets items.
+     *
      * @return The items
      */
     @JsonProperty("items")
@@ -63,6 +74,8 @@ public class ProductCompositeResponse {
     }
 
     /**
+     * Sets items.
+     *
      * @param items The items
      */
     @JsonProperty("items")
@@ -70,11 +83,22 @@ public class ProductCompositeResponse {
         this.items = items;
     }
 
+    /**
+     * Gets additional properties.
+     *
+     * @return the additional properties
+     */
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
         return this.additionalProperties;
     }
 
+    /**
+     * Sets additional property.
+     *
+     * @param name  the name
+     * @param value the value
+     */
     @JsonAnySetter
     public void setAdditionalProperty(String name, Object value) {
         this.additionalProperties.put(name, value);

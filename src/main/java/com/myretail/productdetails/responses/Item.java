@@ -8,6 +8,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * The type Item.
+ */
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @Generated("org.jsonschema2pojo")
 @JsonPropertyOrder({
@@ -78,24 +81,26 @@ public class Item {
     }
 
     /**
-     * @param onlineDescription
-     * @param generalDescription
-     * @param classId
-     * @param relationDescription
-     * @param relation
-     * @param isSellable
-     * @param itemId
-     * @param businessProcessStatus
-     * @param alternateDescription
-     * @param imnIdentifier
-     * @param storeDescription
-     * @param features
-     * @param dataPageLink
-     * @param isCircularPublish
-     * @param departmentId
-     * @param isOrderable
-     * @param dpci
-     * @param identifier
+     * Instantiates a new Item.
+     *
+     * @param identifier            the identifier
+     * @param relation              the relation
+     * @param relationDescription   the relation description
+     * @param dataPageLink          the data page link
+     * @param imnIdentifier         the imn identifier
+     * @param isOrderable           the is orderable
+     * @param isSellable            the is sellable
+     * @param generalDescription    the general description
+     * @param isCircularPublish     the is circular publish
+     * @param businessProcessStatus the business process status
+     * @param dpci                  the dpci
+     * @param departmentId          the department id
+     * @param classId               the class id
+     * @param itemId                the item id
+     * @param onlineDescription     the online description
+     * @param storeDescription      the store description
+     * @param alternateDescription  the alternate description
+     * @param features              the features
      */
     public Item(List<Identifier> identifier, String relation, String relationDescription, String dataPageLink, Integer imnIdentifier, Boolean isOrderable, Boolean isSellable, String generalDescription, Boolean isCircularPublish, List<BusinessProcessStatu> businessProcessStatus, String dpci, Integer departmentId, Integer classId, Integer itemId, OnlineDescription onlineDescription, StoreDescription storeDescription, List<AlternateDescription> alternateDescription, List<Feature> features) {
         this.identifier = identifier;
@@ -119,6 +124,8 @@ public class Item {
     }
 
     /**
+     * Gets identifier.
+     *
      * @return The identifier
      */
     @JsonProperty("identifier")
@@ -127,6 +134,8 @@ public class Item {
     }
 
     /**
+     * Sets identifier.
+     *
      * @param identifier The identifier
      */
     @JsonProperty("identifier")
@@ -135,6 +144,8 @@ public class Item {
     }
 
     /**
+     * Gets relation.
+     *
      * @return The relation
      */
     @JsonProperty("relation")
@@ -143,6 +154,8 @@ public class Item {
     }
 
     /**
+     * Sets relation.
+     *
      * @param relation The relation
      */
     @JsonProperty("relation")
@@ -151,6 +164,8 @@ public class Item {
     }
 
     /**
+     * Gets relation description.
+     *
      * @return The relationDescription
      */
     @JsonProperty("relation_description")
@@ -159,6 +174,8 @@ public class Item {
     }
 
     /**
+     * Sets relation description.
+     *
      * @param relationDescription The relation_description
      */
     @JsonProperty("relation_description")
@@ -167,6 +184,8 @@ public class Item {
     }
 
     /**
+     * Gets data page link.
+     *
      * @return The dataPageLink
      */
     @JsonProperty("data_page_link")
@@ -175,6 +194,8 @@ public class Item {
     }
 
     /**
+     * Sets data page link.
+     *
      * @param dataPageLink The data_page_link
      */
     @JsonProperty("data_page_link")
@@ -183,6 +204,8 @@ public class Item {
     }
 
     /**
+     * Gets imn identifier.
+     *
      * @return The imnIdentifier
      */
     @JsonProperty("imn_identifier")
@@ -191,6 +214,8 @@ public class Item {
     }
 
     /**
+     * Sets imn identifier.
+     *
      * @param imnIdentifier The imn_identifier
      */
     @JsonProperty("imn_identifier")
@@ -199,6 +224,8 @@ public class Item {
     }
 
     /**
+     * Gets is orderable.
+     *
      * @return The isOrderable
      */
     @JsonProperty("is_orderable")
@@ -207,6 +234,8 @@ public class Item {
     }
 
     /**
+     * Sets is orderable.
+     *
      * @param isOrderable The is_orderable
      */
     @JsonProperty("is_orderable")
@@ -215,6 +244,8 @@ public class Item {
     }
 
     /**
+     * Gets is sellable.
+     *
      * @return The isSellable
      */
     @JsonProperty("is_sellable")
@@ -223,6 +254,8 @@ public class Item {
     }
 
     /**
+     * Sets is sellable.
+     *
      * @param isSellable The is_sellable
      */
     @JsonProperty("is_sellable")
@@ -231,6 +264,8 @@ public class Item {
     }
 
     /**
+     * Gets general description.
+     *
      * @return The generalDescription
      */
     @JsonProperty("general_description")
@@ -239,6 +274,8 @@ public class Item {
     }
 
     /**
+     * Sets general description.
+     *
      * @param generalDescription The general_description
      */
     @JsonProperty("general_description")
@@ -247,6 +284,8 @@ public class Item {
     }
 
     /**
+     * Gets is circular publish.
+     *
      * @return The isCircularPublish
      */
     @JsonProperty("is_circular_publish")
@@ -255,6 +294,8 @@ public class Item {
     }
 
     /**
+     * Sets is circular publish.
+     *
      * @param isCircularPublish The is_circular_publish
      */
     @JsonProperty("is_circular_publish")
@@ -263,6 +304,8 @@ public class Item {
     }
 
     /**
+     * Gets business process status.
+     *
      * @return The businessProcessStatus
      */
     @JsonProperty("business_process_status")
@@ -271,6 +314,8 @@ public class Item {
     }
 
     /**
+     * Sets business process status.
+     *
      * @param businessProcessStatus The business_process_status
      */
     @JsonProperty("business_process_status")
@@ -279,6 +324,8 @@ public class Item {
     }
 
     /**
+     * Gets dpci.
+     *
      * @return The dpci
      */
     @JsonProperty("dpci")
@@ -287,6 +334,8 @@ public class Item {
     }
 
     /**
+     * Sets dpci.
+     *
      * @param dpci The dpci
      */
     @JsonProperty("dpci")
@@ -295,6 +344,8 @@ public class Item {
     }
 
     /**
+     * Gets department id.
+     *
      * @return The departmentId
      */
     @JsonProperty("department_id")
@@ -303,6 +354,8 @@ public class Item {
     }
 
     /**
+     * Sets department id.
+     *
      * @param departmentId The department_id
      */
     @JsonProperty("department_id")
@@ -311,6 +364,8 @@ public class Item {
     }
 
     /**
+     * Gets class id.
+     *
      * @return The classId
      */
     @JsonProperty("class_id")
@@ -319,6 +374,8 @@ public class Item {
     }
 
     /**
+     * Sets class id.
+     *
      * @param classId The class_id
      */
     @JsonProperty("class_id")
@@ -327,6 +384,8 @@ public class Item {
     }
 
     /**
+     * Gets item id.
+     *
      * @return The itemId
      */
     @JsonProperty("item_id")
@@ -335,6 +394,8 @@ public class Item {
     }
 
     /**
+     * Sets item id.
+     *
      * @param itemId The item_id
      */
     @JsonProperty("item_id")
@@ -343,6 +404,8 @@ public class Item {
     }
 
     /**
+     * Gets online description.
+     *
      * @return The onlineDescription
      */
     @JsonProperty("online_description")
@@ -351,6 +414,8 @@ public class Item {
     }
 
     /**
+     * Sets online description.
+     *
      * @param onlineDescription The online_description
      */
     @JsonProperty("online_description")
@@ -359,6 +424,8 @@ public class Item {
     }
 
     /**
+     * Gets store description.
+     *
      * @return The storeDescription
      */
     @JsonProperty("store_description")
@@ -367,6 +434,8 @@ public class Item {
     }
 
     /**
+     * Sets store description.
+     *
      * @param storeDescription The store_description
      */
     @JsonProperty("store_description")
@@ -375,6 +444,8 @@ public class Item {
     }
 
     /**
+     * Gets alternate description.
+     *
      * @return The alternateDescription
      */
     @JsonProperty("alternate_description")
@@ -383,6 +454,8 @@ public class Item {
     }
 
     /**
+     * Sets alternate description.
+     *
      * @param alternateDescription The alternate_description
      */
     @JsonProperty("alternate_description")
@@ -391,6 +464,8 @@ public class Item {
     }
 
     /**
+     * Gets features.
+     *
      * @return The features
      */
     @JsonProperty("features")
@@ -399,6 +474,8 @@ public class Item {
     }
 
     /**
+     * Sets features.
+     *
      * @param features The features
      */
     @JsonProperty("features")
@@ -406,11 +483,22 @@ public class Item {
         this.features = features;
     }
 
+    /**
+     * Gets additional properties.
+     *
+     * @return the additional properties
+     */
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
         return this.additionalProperties;
     }
 
+    /**
+     * Sets additional property.
+     *
+     * @param name  the name
+     * @param value the value
+     */
     @JsonAnySetter
     public void setAdditionalProperty(String name, Object value) {
         this.additionalProperties.put(name, value);

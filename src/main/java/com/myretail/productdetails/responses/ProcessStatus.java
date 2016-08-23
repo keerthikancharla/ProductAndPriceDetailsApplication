@@ -6,6 +6,9 @@ import javax.annotation.Generated;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * The type Process status.
+ */
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @Generated("org.jsonschema2pojo")
 @JsonPropertyOrder({
@@ -31,9 +34,11 @@ public class ProcessStatus {
     }
 
     /**
-     * @param operationDescription
-     * @param isReady
-     * @param operationCode
+     * Instantiates a new Process status.
+     *
+     * @param isReady              the is ready
+     * @param operationDescription the operation description
+     * @param operationCode        the operation code
      */
     public ProcessStatus(Boolean isReady, String operationDescription, String operationCode) {
         this.isReady = isReady;
@@ -42,6 +47,8 @@ public class ProcessStatus {
     }
 
     /**
+     * Gets is ready.
+     *
      * @return The isReady
      */
     @JsonProperty("is_ready")
@@ -50,6 +57,8 @@ public class ProcessStatus {
     }
 
     /**
+     * Sets is ready.
+     *
      * @param isReady The is_ready
      */
     @JsonProperty("is_ready")
@@ -58,6 +67,8 @@ public class ProcessStatus {
     }
 
     /**
+     * Gets operation description.
+     *
      * @return The operationDescription
      */
     @JsonProperty("operation_description")
@@ -66,6 +77,8 @@ public class ProcessStatus {
     }
 
     /**
+     * Sets operation description.
+     *
      * @param operationDescription The operation_description
      */
     @JsonProperty("operation_description")
@@ -74,6 +87,8 @@ public class ProcessStatus {
     }
 
     /**
+     * Gets operation code.
+     *
      * @return The operationCode
      */
     @JsonProperty("operation_code")
@@ -82,6 +97,8 @@ public class ProcessStatus {
     }
 
     /**
+     * Sets operation code.
+     *
      * @param operationCode The operation_code
      */
     @JsonProperty("operation_code")
@@ -89,11 +106,22 @@ public class ProcessStatus {
         this.operationCode = operationCode;
     }
 
+    /**
+     * Gets additional properties.
+     *
+     * @return the additional properties
+     */
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
         return this.additionalProperties;
     }
 
+    /**
+     * Sets additional property.
+     *
+     * @param name  the name
+     * @param value the value
+     */
     @JsonAnySetter
     public void setAdditionalProperty(String name, Object value) {
         this.additionalProperties.put(name, value);

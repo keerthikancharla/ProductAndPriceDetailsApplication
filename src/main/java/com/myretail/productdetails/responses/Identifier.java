@@ -6,6 +6,9 @@ import javax.annotation.Generated;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * The type Identifier.
+ */
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @Generated("org.jsonschema2pojo")
 @JsonPropertyOrder({
@@ -34,10 +37,12 @@ public class Identifier {
     }
 
     /**
-     * @param id
-     * @param idType
-     * @param isPrimary
-     * @param source
+     * Instantiates a new Identifier.
+     *
+     * @param idType    the id type
+     * @param id        the id
+     * @param isPrimary the is primary
+     * @param source    the source
      */
     public Identifier(String idType, String id, Object isPrimary, String source) {
         this.idType = idType;
@@ -47,6 +52,8 @@ public class Identifier {
     }
 
     /**
+     * Gets id type.
+     *
      * @return The idType
      */
     @JsonProperty("id_type")
@@ -55,6 +62,8 @@ public class Identifier {
     }
 
     /**
+     * Sets id type.
+     *
      * @param idType The id_type
      */
     @JsonProperty("id_type")
@@ -63,6 +72,8 @@ public class Identifier {
     }
 
     /**
+     * Gets id.
+     *
      * @return The id
      */
     @JsonProperty("id")
@@ -71,6 +82,8 @@ public class Identifier {
     }
 
     /**
+     * Sets id.
+     *
      * @param id The id
      */
     @JsonProperty("id")
@@ -79,6 +92,8 @@ public class Identifier {
     }
 
     /**
+     * Gets is primary.
+     *
      * @return The isPrimary
      */
     @JsonProperty("is_primary")
@@ -87,6 +102,8 @@ public class Identifier {
     }
 
     /**
+     * Sets is primary.
+     *
      * @param isPrimary The is_primary
      */
     @JsonProperty("is_primary")
@@ -95,6 +112,8 @@ public class Identifier {
     }
 
     /**
+     * Gets source.
+     *
      * @return The source
      */
     @JsonProperty("source")
@@ -103,6 +122,8 @@ public class Identifier {
     }
 
     /**
+     * Sets source.
+     *
      * @param source The source
      */
     @JsonProperty("source")
@@ -110,11 +131,22 @@ public class Identifier {
         this.source = source;
     }
 
+    /**
+     * Gets additional properties.
+     *
+     * @return the additional properties
+     */
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
         return this.additionalProperties;
     }
 
+    /**
+     * Sets additional property.
+     *
+     * @param name  the name
+     * @param value the value
+     */
     @JsonAnySetter
     public void setAdditionalProperty(String name, Object value) {
         this.additionalProperties.put(name, value);

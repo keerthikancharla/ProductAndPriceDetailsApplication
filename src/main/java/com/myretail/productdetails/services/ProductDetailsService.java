@@ -29,6 +29,13 @@ public class ProductDetailsService {
     private String priceUpdateUrl = "http://localhost:8654/price";
 
 
+    /**
+     * Gets product name.
+     *
+     * @param productId the product id
+     * @return the product name
+     * This method is used to get the product name using Target API for a given product ID
+     */
     public String getProductName(Integer productId) {
         String url = productDetailsUrl.replace("{id}", String.valueOf(productId));
         url=url.replace("{apiKey}",propertyConfigurations.getApiKey());
@@ -42,6 +49,13 @@ public class ProductDetailsService {
         return null;
     }
 
+    /**
+     * Gets product price.
+     *
+     * @param productId the product id
+     * @return the product price
+     * This method is used to get the product price using PriceDetails Service for a given product ID
+     */
     public ProductPrice getProductPrice(Integer productId) {
         String url = productPriceUrl.replace("{id}", String.valueOf(productId));
         ProductPrice productPrice = null;
@@ -61,6 +75,14 @@ public class ProductDetailsService {
         return productPrice;
     }
 
+    /**
+     * Update product price string.
+     *
+     * @param productId    the product id
+     * @param productPrice the product price
+     * @return the string
+     * This method is used to update the product price using PriceDetails Service for a given product ID
+     */
     public String updateProductPrice(Integer productId, ProductPrice productPrice) {
         PriceDetails priceDetails = new PriceDetails();
         priceDetails.setProductId(productId);
