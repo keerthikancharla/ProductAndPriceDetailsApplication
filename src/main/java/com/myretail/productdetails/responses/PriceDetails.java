@@ -6,6 +6,9 @@ import javax.annotation.Generated;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * The type Price details.
+ */
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @Generated("org.jsonschema2pojo")
 @JsonPropertyOrder({
@@ -31,9 +34,11 @@ public class PriceDetails {
     }
 
     /**
-     * @param currencyCode
-     * @param productPrice
-     * @param productId
+     * Instantiates a new Price details.
+     *
+     * @param productId    the product id
+     * @param productPrice the product price
+     * @param currencyCode the currency code
      */
     public PriceDetails(Integer productId, Double productPrice, String currencyCode) {
         this.productId = productId;
@@ -42,6 +47,8 @@ public class PriceDetails {
     }
 
     /**
+     * Gets product id.
+     *
      * @return The productId
      */
     @JsonProperty("productId")
@@ -50,6 +57,8 @@ public class PriceDetails {
     }
 
     /**
+     * Sets product id.
+     *
      * @param productId The productId
      */
     @JsonProperty("productId")
@@ -58,6 +67,8 @@ public class PriceDetails {
     }
 
     /**
+     * Gets product price.
+     *
      * @return The productPrice
      */
     @JsonProperty("productPrice")
@@ -66,6 +77,8 @@ public class PriceDetails {
     }
 
     /**
+     * Sets product price.
+     *
      * @param productPrice The productPrice
      */
     @JsonProperty("productPrice")
@@ -74,6 +87,8 @@ public class PriceDetails {
     }
 
     /**
+     * Gets currency code.
+     *
      * @return The currencyCode
      */
     @JsonProperty("currencyCode")
@@ -82,6 +97,8 @@ public class PriceDetails {
     }
 
     /**
+     * Sets currency code.
+     *
      * @param currencyCode The currencyCode
      */
     @JsonProperty("currencyCode")
@@ -89,11 +106,22 @@ public class PriceDetails {
         this.currencyCode = currencyCode;
     }
 
+    /**
+     * Gets additional properties.
+     *
+     * @return the additional properties
+     */
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
         return this.additionalProperties;
     }
 
+    /**
+     * Sets additional property.
+     *
+     * @param name  the name
+     * @param value the value
+     */
     @JsonAnySetter
     public void setAdditionalProperty(String name, Object value) {
         this.additionalProperties.put(name, value);

@@ -6,6 +6,9 @@ import javax.annotation.Generated;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * The type Alternate description.
+ */
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @Generated("org.jsonschema2pojo")
 @JsonPropertyOrder({
@@ -31,9 +34,11 @@ public class AlternateDescription {
     }
 
     /**
-     * @param typeDescription
-     * @param value
-     * @param type
+     * Instantiates a new Alternate description.
+     *
+     * @param type            the type
+     * @param value           the value
+     * @param typeDescription the type description
      */
     public AlternateDescription(String type, String value, String typeDescription) {
         this.type = type;
@@ -42,6 +47,8 @@ public class AlternateDescription {
     }
 
     /**
+     * Gets type.
+     *
      * @return The type
      */
     @JsonProperty("type")
@@ -50,6 +57,8 @@ public class AlternateDescription {
     }
 
     /**
+     * Sets type.
+     *
      * @param type The type
      */
     @JsonProperty("type")
@@ -58,6 +67,8 @@ public class AlternateDescription {
     }
 
     /**
+     * Gets value.
+     *
      * @return The value
      */
     @JsonProperty("value")
@@ -66,6 +77,8 @@ public class AlternateDescription {
     }
 
     /**
+     * Sets value.
+     *
      * @param value The value
      */
     @JsonProperty("value")
@@ -74,6 +87,8 @@ public class AlternateDescription {
     }
 
     /**
+     * Gets type description.
+     *
      * @return The typeDescription
      */
     @JsonProperty("type_description")
@@ -82,6 +97,8 @@ public class AlternateDescription {
     }
 
     /**
+     * Sets type description.
+     *
      * @param typeDescription The type_description
      */
     @JsonProperty("type_description")
@@ -89,11 +106,22 @@ public class AlternateDescription {
         this.typeDescription = typeDescription;
     }
 
+    /**
+     * Gets additional properties.
+     *
+     * @return the additional properties
+     */
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
         return this.additionalProperties;
     }
 
+    /**
+     * Sets additional property.
+     *
+     * @param name  the name
+     * @param value the value
+     */
     @JsonAnySetter
     public void setAdditionalProperty(String name, Object value) {
         this.additionalProperties.put(name, value);

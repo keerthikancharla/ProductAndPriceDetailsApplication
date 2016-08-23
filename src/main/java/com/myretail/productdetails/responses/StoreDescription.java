@@ -6,6 +6,9 @@ import javax.annotation.Generated;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * The type Store description.
+ */
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @Generated("org.jsonschema2pojo")
 @JsonPropertyOrder({
@@ -28,8 +31,10 @@ public class StoreDescription {
     }
 
     /**
-     * @param value
-     * @param type
+     * Instantiates a new Store description.
+     *
+     * @param value the value
+     * @param type  the type
      */
     public StoreDescription(String value, String type) {
         this.value = value;
@@ -37,6 +42,8 @@ public class StoreDescription {
     }
 
     /**
+     * Gets value.
+     *
      * @return The value
      */
     @JsonProperty("value")
@@ -45,6 +52,8 @@ public class StoreDescription {
     }
 
     /**
+     * Sets value.
+     *
      * @param value The value
      */
     @JsonProperty("value")
@@ -53,6 +62,8 @@ public class StoreDescription {
     }
 
     /**
+     * Gets type.
+     *
      * @return The type
      */
     @JsonProperty("type")
@@ -61,6 +72,8 @@ public class StoreDescription {
     }
 
     /**
+     * Sets type.
+     *
      * @param type The type
      */
     @JsonProperty("type")
@@ -68,11 +81,22 @@ public class StoreDescription {
         this.type = type;
     }
 
+    /**
+     * Gets additional properties.
+     *
+     * @return the additional properties
+     */
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
         return this.additionalProperties;
     }
 
+    /**
+     * Sets additional property.
+     *
+     * @param name  the name
+     * @param value the value
+     */
     @JsonAnySetter
     public void setAdditionalProperty(String name, Object value) {
         this.additionalProperties.put(name, value);

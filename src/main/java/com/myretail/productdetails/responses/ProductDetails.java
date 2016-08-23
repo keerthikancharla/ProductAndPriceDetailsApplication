@@ -6,6 +6,9 @@ import javax.annotation.Generated;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * The type Product details.
+ */
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @Generated("org.jsonschema2pojo")
 @JsonPropertyOrder({
@@ -25,13 +28,17 @@ public class ProductDetails {
     }
 
     /**
-     * @param productCompositeResponse
+     * Instantiates a new Product details.
+     *
+     * @param productCompositeResponse the product composite response
      */
     public ProductDetails(ProductCompositeResponse productCompositeResponse) {
         this.productCompositeResponse = productCompositeResponse;
     }
 
     /**
+     * Gets product composite response.
+     *
      * @return The productCompositeResponse
      */
     @JsonProperty("product_composite_response")
@@ -40,6 +47,8 @@ public class ProductDetails {
     }
 
     /**
+     * Sets product composite response.
+     *
      * @param productCompositeResponse The product_composite_response
      */
     @JsonProperty("product_composite_response")
@@ -47,11 +56,22 @@ public class ProductDetails {
         this.productCompositeResponse = productCompositeResponse;
     }
 
+    /**
+     * Gets additional properties.
+     *
+     * @return the additional properties
+     */
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
         return this.additionalProperties;
     }
 
+    /**
+     * Sets additional property.
+     *
+     * @param name  the name
+     * @param value the value
+     */
     @JsonAnySetter
     public void setAdditionalProperty(String name, Object value) {
         this.additionalProperties.put(name, value);
