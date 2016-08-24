@@ -1,10 +1,11 @@
 package com.myretail.productdetails.services;
 
 import com.myretail.productdetails.config.PropertyConfigurations;
-import com.myretail.productdetails.exceptions.UnknownServerException;
 import com.myretail.productdetails.responses.PriceDetails;
 import com.myretail.productdetails.responses.ProductDetails;
 import com.myretail.productdetails.responses.ProductPrice;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -18,6 +19,7 @@ import org.springframework.web.client.RestTemplate;
 @Service
 public class ProductDetailsService {
 
+    private final Logger logger = LoggerFactory.getLogger(ProductDetailsService.class);
     @Autowired
     private RestTemplate restTemplate;
 
@@ -70,7 +72,7 @@ public class ProductDetailsService {
             }
 
         } catch (HttpClientErrorException e) {
-            System.out.println(e.getMessage());
+            logger.error(e.getMessage(), e);
         }
         return productPrice;
     }
@@ -91,7 +93,7 @@ public class ProductDetailsService {
         try {
             restTemplate.put(priceUpdateUrl, priceDetails);
         } catch (HttpClientErrorException e) {
-            System.out.println(e.getMessage());
+            logger.error(e.getMessage(), e);
             return "Product price update failed";
         }
 

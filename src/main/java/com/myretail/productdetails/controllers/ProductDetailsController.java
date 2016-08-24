@@ -4,6 +4,8 @@ import com.myretail.productdetails.exceptions.ProductNotFoundException;
 import com.myretail.productdetails.responses.ProductAndPriceDetails;
 import com.myretail.productdetails.responses.ProductPrice;
 import com.myretail.productdetails.services.ProductDetailsService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
@@ -18,6 +20,7 @@ import javax.validation.constraints.NotNull;
  */
 @Controller
 public class ProductDetailsController {
+    private final Logger logger = LoggerFactory.getLogger(ProductDetailsController.class);
     @Autowired
     private ProductDetailsService productDetailsService;
 
@@ -33,12 +36,12 @@ public class ProductDetailsController {
     public
     @ResponseBody
     ProductAndPriceDetails getProductAndPriceDetails(@PathVariable @NotNull Integer productId) {
+        logger.info("Invoked GET method with URL as /products/{productId}");
         ProductAndPriceDetails productAndPriceDetails = new ProductAndPriceDetails();
         productAndPriceDetails.setProductId(productId);
         String productName = productDetailsService.getProductName(productId);
         if (productName == null)
             throw new ProductNotFoundException();
-
         productAndPriceDetails.setProductName(productName);
         ProductPrice productPrice = productDetailsService.getProductPrice(productId);
         if (productPrice == null)
@@ -61,6 +64,7 @@ public class ProductDetailsController {
     public
     @ResponseBody
     String updatePriceDetails(@PathVariable @NotNull Integer productId, @RequestBody @Valid ProductPrice productPrice) {
+        logger.info("Invoked PUT method with URL as /products/{productId}");
         String responseMessage = null;
         try {
             responseMessage = productDetailsService.updateProductPrice(productId, productPrice);
